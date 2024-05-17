@@ -20,17 +20,67 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(31, 238, 164, 164),
       ),
-      // contain widget
-      // body: Container(
-      //   color: Colors.grey,
-      //   child: Text("Hello"),
-      //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-      //   margin: EdgeInsets.all(30),
-      // )
-      // padding widget
-      body: Padding(
-        child: Text("Hello",),
-        padding: EdgeInsets.all(30),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+              padding: const EdgeInsets.all(30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                      color: Colors.blue,
+                      child: const Text("Column 1 row 1"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.blue,
+                      child: const Text("Column 1 row 2"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.blue,
+                      child: const Text("Column 1 row 3"),
+                      padding: EdgeInsets.all(2)),
+                ],
+              )),
+          Container(
+              padding: EdgeInsets.all(30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                      color: Colors.red,
+                      child: const Text("Column 2 row 1"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.red,
+                      child: const Text("Column 2 row 2"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.red,
+                      child: const Text("Column 2 row 3"),
+                      padding: EdgeInsets.all(2)),
+                ],
+              )),
+          Container(
+              padding: EdgeInsets.all(30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                      color: Colors.green,
+                      child: const Text("Column 3 row 1"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.green,
+                      child: const Text("Column 3 row 2"),
+                      padding: EdgeInsets.all(2)),
+                  Container(
+                      color: Colors.green,
+                      child: const Text("Column 3 row 3"),
+                      padding: EdgeInsets.all(2)),
+                ],
+              )),
+        ],
       ),
     );
   }
