@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Test()));
+  runApp(const MaterialApp(home: MyApp()));
 }
 
-class Test extends StatelessWidget {
-  const Test({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   void onClick() {
     // ignore: avoid_print
@@ -20,43 +20,18 @@ class Test extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(31, 238, 164, 164),
       ),
-      body: Center(
-        // 3 types of button
-        // Flatbutton => TextButton doesn't have shadow
-        // RaisedButton => ElevatedButton have shadow
-        // IconButton
-
-        // icon only
-        // child: Icon(Icons.emoji_events_sharp, color: Colors.deepPurple, size: 50,)
-
-        // button
-        //   child: ElevatedButton.icon(
-        //   icon: const Icon(Icons.access_alarms),
-        //   label: const Text("Click me and see what happens", style: TextStyle()),
-        //   onPressed: onClick,
-        //   style: ElevatedButton.styleFrom(
-        //     backgroundColor: Colors.white,
-        //   ),
-        // )
-
-        // icon button
-        child: IconButton(
-          onPressed: onClick,
-          icon: const Icon(Icons.accessibility),
-          color: Colors.amber,
-        ),
+      // contain widget
+      // body: Container(
+      //   color: Colors.grey,
+      //   child: Text("Hello"),
+      //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
+      //   margin: EdgeInsets.all(30),
+      // )
+      // padding widget
+      body: Padding(
+        child: Text("Hello",),
+        padding: EdgeInsets.all(30),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () => {},
-      //   backgroundColor: const Color.fromARGB(255, 223, 125, 240),
-      //   shape: const CircleBorder(),
-      //   child: const Text(
-      //     "click me",
-      //     style: TextStyle(
-      //       color: Colors.white,
-      //     ),
-      //   ),
-      // ),
     );
   }
 }
