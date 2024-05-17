@@ -1,38 +1,62 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home:new Test()
-  ));
+  runApp(const MaterialApp(home: Test()));
 }
 
 class Test extends StatelessWidget {
   const Test({super.key});
 
+  void onClick() {
+    // ignore: avoid_print
+    print("Damn boi he thiccc");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Text("Hello World"),
+        title: const Text("My Flutter App"),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(31, 238, 164, 164),
       ),
       body: Center(
-        // child: Image(
-        //   image: AssetImage('assets/toji.jpg')
-        //   // image: NetworkImage('https://images.unsplash.com/photo-1715454969547-a69afff2a701?q=80&w=1881&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+        // 3 types of button
+        // Flatbutton => TextButton doesn't have shadow
+        // RaisedButton => ElevatedButton have shadow
+        // IconButton
+
+        // icon only
+        // child: Icon(Icons.emoji_events_sharp, color: Colors.deepPurple, size: 50,)
+
+        // button
+        //   child: ElevatedButton.icon(
+        //   icon: const Icon(Icons.access_alarms),
+        //   label: const Text("Click me and see what happens", style: TextStyle()),
+        //   onPressed: onClick,
+        //   style: ElevatedButton.styleFrom(
+        //     backgroundColor: Colors.white,
+        //   ),
         // )
-        child: Image.network('https://images.unsplash.com/photo-1715454969547-a69afff2a701?q=80&w=1881&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},    
-        child: const Text(
-          "click me",
-          style: TextStyle(color: Colors.white),
+
+        // icon button
+        child: IconButton(
+          onPressed: onClick,
+          icon: const Icon(Icons.accessibility),
+          color: Colors.amber,
         ),
-        backgroundColor: Color.fromARGB(255, 223, 125, 240),  
-        shape: CircleBorder(),
-      ),  
+      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () => {},
+      //   backgroundColor: const Color.fromARGB(255, 223, 125, 240),
+      //   shape: const CircleBorder(),
+      //   child: const Text(
+      //     "click me",
+      //     style: TextStyle(
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
