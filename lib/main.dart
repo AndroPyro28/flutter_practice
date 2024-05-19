@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(31, 238, 164, 164),
       ),
-      body: Column(
+      body: Container(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
@@ -34,11 +34,11 @@ class MyApp extends StatelessWidget {
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.blue,
-                      child: const Text("Column 1 row 2"),
+                      child: const Text("Column 2 row 1"),
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.blue,
-                      child: const Text("Column 1 row 3"),
+                      child: const Text("Column 3 row 1"),
                       padding: EdgeInsets.all(2)),
                 ],
               )),
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                 children: [
                   Container(
                       color: Colors.red,
-                      child: const Text("Column 2 row 1"),
+                      child: const Text("Column 1 row 2"),
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.red,
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.red,
-                      child: const Text("Column 2 row 3"),
+                      child: const Text("Column 3 row 2"),
                       padding: EdgeInsets.all(2)),
                 ],
               )),
@@ -68,20 +68,21 @@ class MyApp extends StatelessWidget {
                 children: [
                   Container(
                       color: Colors.green,
-                      child: const Text("Column 3 row 1"),
+                      child: const Text("Column 1 row 3"),
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.green,
-                      child: const Text("Column 3 row 2"),
+                      child: const Text("Column 2 row 3"),
                       padding: EdgeInsets.all(2)),
                   Container(
                       color: Colors.green,
                       child: const Text("Column 3 row 3"),
                       padding: EdgeInsets.all(2)),
+                      
                 ],
               )),
         ],
-      ),
+      ),) 
     );
   }
 }
